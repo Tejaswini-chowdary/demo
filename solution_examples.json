@@ -7,7 +7,7 @@
   },
   "performance_metrics": {
     "average_solve_time_seconds": 0.0,
-    "average_solution_length": 14.7,
+    "average_solution_length": 13.7,
     "fastest_solve_seconds": 0.0,
     "shortest_solution_moves": 10,
     "success_rate_percent": 100.0,
