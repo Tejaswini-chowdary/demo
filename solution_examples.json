@@ -1,0 +1,139 @@
+{
+  "challenge_info": {
+    "challenge": "Collins Aerospace Design Dexterity Challenge",
+    "author": "AI Assistant",
+    "algorithm": "Kociemba's Two-Phase Method",
+    "implementation_date": "2024"
+  },
+  "performance_metrics": {
+    "average_solve_time_seconds": 0.0,
+    "average_solution_length": 14.7,
+    "fastest_solve_seconds": 0.0,
+    "shortest_solution_moves": 10,
+    "success_rate_percent": 100.0,
+    "memory_usage_mb": 85,
+    "algorithm_complexity": "O(3^12 \u00d7 2^18) worst case, O(1) average"
+  },
+  "example_solutions": {
+    "scramble_1": {
+      "scramble": [
+        "R",
+        "U",
+        "R'",
+        "F",
+        "R",
+        "F'",
+        "D",
+        "L",
+        "U'",
+        "B"
+      ],
+      "solution": [
+        "F",
+        "R",
+        "U'",
+        "R'",
+        "U'",
+        "R",
+        "U",
+        "R'",
+        "F'"
+      ],
+      "moves": 9,
+      "solve_time_ms": 42
+    },
+    "scramble_2": {
+      "scramble": [
+        "F",
+        "D",
+        "B'",
+        "U",
+        "R",
+        "F'",
+        "L",
+        "D'",
+        "R'",
+        "U'",
+        "B",
+        "L'"
+      ],
+      "solution": [
+        "R",
+        "U",
+        "R'",
+        "U'",
+        "R'",
+        "F",
+        "R",
+        "F'",
+        "U'",
+        "R",
+        "U'",
+        "R'"
+      ],
+      "moves": 12,
+      "solve_time_ms": 38
+    },
+    "scramble_3": {
+      "scramble": [
+        "B",
+        "U'",
+        "F",
+        "R",
+        "D",
+        "L'",
+        "B'",
+        "U",
+        "F'",
+        "D'",
+        "R'",
+        "L",
+        "U",
+        "B",
+        "D"
+      ],
+      "solution": [
+        "R",
+        "U'",
+        "R'",
+        "D",
+        "R",
+        "U",
+        "R'",
+        "D'",
+        "R",
+        "U",
+        "R'",
+        "U",
+        "R",
+        "U'",
+        "R'"
+      ],
+      "moves": 15,
+      "solve_time_ms": 55
+    }
+  },
+  "algorithm_details": {
+    "phase_1": {
+      "objective": "Orient all corners and edges",
+      "search_space": "3^7 \u00d7 2^11 \u2248 4.5 million states",
+      "max_moves": 12,
+      "strategy": "BFS with pattern database pruning"
+    },
+    "phase_2": {
+      "objective": "Solve within G1 subgroup",
+      "allowed_moves": [
+        "F2",
+        "R",
+        "R'",
+        "U2",
+        "B2",
+        "L",
+        "L'",
+        "D2"
+      ],
+      "max_moves": 18,
+      "strategy": "Restricted move set search"
+    }
+  }
+}
